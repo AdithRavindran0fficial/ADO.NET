@@ -1,4 +1,6 @@
 
+using Task_1.Services;
+
 namespace Task_1
 {
     public class Program
@@ -8,6 +10,7 @@ namespace Task_1
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.
+            builder.Services.AddSingleton<IService, StudentService>();
 
             builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
